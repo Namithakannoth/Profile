@@ -1,0 +1,138 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 170px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+}
+
+.navbar span {
+  font-size: 25px;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-mob-close {
+  display: none;
+}
+
+.nav-mob-open {
+  display: none;
+}
+.nav-menu li.active p,
+.nav-menu li.active a {
+  color: #DF8908;
+  border-bottom: 2px solid #DF8908;
+  padding-bottom: 4px;
+}
+
+@media(max-width: 768px) {
+  .navbar {
+    margin: 20px 30px;
+  }
+
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+    top: 24px;
+    z-index: 5;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100vh;
+    gap: 40px;
+    background-color: #1F0016;
+    z-index: 4;
+    transition: right 0.5s;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-mob-close {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 6;
+  }
+
+  .nav-menu li {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 28px;
+  }
+
+  .nav-menu li p {
+    color: white;
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .anchor-link {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+  }
+}
+
+@media(min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 10px 70px;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    font-size: 15px;
+  }
+
+  .navbar span {
+    font-size: 25px;
+    padding-right: 50px;
+  }
+
+  .nav-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+}
